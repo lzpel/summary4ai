@@ -1,0 +1,10 @@
+[package]
+name = "rust_sig_dump"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+walkdir = "2"
+syn = { version = "2", features = ["full", "extra-traits"] }
+quote = "1"
+anyhow = "1"
