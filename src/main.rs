@@ -27,16 +27,14 @@ fn main() -> Result<()> {
 		let file: File =
 			syn::parse_file(&src).with_context(|| format!("Failed to parse {}", path.display()))?;
 
-		println!();
+		// ファイル見出し
 		println!(
 			"// ************* {}",
 			path.strip_prefix(root).unwrap_or(path).display()
 		);
-		println!();
 
 		for item in file.items {
 			print_item(&item, 0);
-			println!();
 		}
 	}
 
